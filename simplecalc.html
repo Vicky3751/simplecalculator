@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body style="background-color: rgb(241, 228, 40);background-image:url(./calci.jpg); background-repeat: no-repeat ; background-size: cover;">
+        <h1 style="text-align: center;box-shadow: 4px 4px 4px #000;border:2px solid black; margin-top: 2px;"><strong style="font-size: 80px;"> SIMPLE CALCULATOR</strong></h2>
+                <div class="container" value=""
+                        style="margin: 40px auto; width: 50%;padding: 20px; border:2px solid black ; background-color: rgb(133, 96, 96);box-shadow: 8px 8px 8px #000;">
+                        <strong style="font-size: 30px;padding-left: 20px;">SC</strong><br>
+                        <input type="text" value="" class="box" id="box"
+                                style="margin: 10px 10px; width: 90%;height: 90px; border: 2px solid black;box-shadow: 8px 8px 8px #000; "></input>
+                        <hr style="box-shadow: 4px 4px 4px #000;">
+                        <table style="margin: 10px auto; width: 90%;height: 90px;">
+                                <tr>
+                                        <td><button type="button" data-value="2" class="btn1" id="btn11"
+                                                        onclick="shownum('1')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">1</button>
+                                        </td>
+                                        <td><button type="button" data-value="2" class="btn2" id="btn21"
+                                                        onclick="shownum('2')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">2</button>
+                                        </td>
+                                        <td><button type="button" data-value="3" class="btn3" id="btn31"
+                                                        onclick="shownum('3')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">3</button>
+                                        </td>
+
+                                        <td colspan="2"><button type="button" data-op="c" class="btnclear"
+                                                        id="btnclear1" onclick="clearr()"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 95%;height: 90px;font-size: 50px;">c</button>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td><button type="button" data-value="4" class="btn4" id="btn41"
+                                                        onclick="shownum('4')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">4</button>
+                                        </td>
+                                        <td><button type="button" data-value="5" class="btn5" id="btn51"
+                                                        onclick="shownum('5')"
+                                                        style="background-color: yellow; box-shadow: 4px 4px 4px #000;width: 90%;height: 90px;font-size: 50px;">5</button>
+                                        </td>
+                                        <td><button type="button" data-value="6" class="btn6" id="btn61"
+                                                        onclick="shownum('6')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">6</button>
+                                        </td>
+
+                                        <td><button type="button" data-op="+" class="btnplus" id="btnplus1"
+                                                        onclick="shownum('+')"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">+</button>
+                                        </td>
+                                        <td><button type="button" class="btnminus" id="btnminus1" onclick="shownum('-')"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">-</button>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td><button type="button" data-value="7" class="btn7" id="btn71"
+                                                        onclick="shownum('7')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">7</button>
+                                        </td>
+                                        <td><button type="button" data-value="8" class="btn8" id="btn81"
+                                                        onclick="shownum('8')"
+                                                        style="background-color: yellow; box-shadow: 4px 4px 4px #000;width: 90%;height: 90px;font-size: 50px;">8</button>
+                                        </td>
+                                        <td><button type="button" data-value="9" class="btn9" id="btn91"
+                                                        onclick="shownum('9')"
+                                                        style="background-color: yellow; box-shadow: 4px 4px 4px #000;width: 90%;height: 90px;font-size: 50px;">9</button>
+                                        </td>
+
+                                        <td><button type="button" data-op=""="/" class="btndiv" id="btndiv1"
+                                                        onclick="shownum('/')"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">/</button>
+                                        </td>
+                                        <td><button type="button" data-op="*" class="btn6" id="btnmul1"
+                                                        onclick="shownum('*')"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">*</button>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td><button type="button" data-value="." class="btndot" id="btndot1"
+                                                        onclick="shownum('.')"
+                                                        style="background-color: yellow;box-shadow: 4px 4px 4px #000; width: 90%;height: 90px;font-size: 50px;">.</button>
+                                        </td>
+                                        <td><button type="button" data-value="0" class="btn0" id="btn01"
+                                                        onclick="shownum('0')"
+                                                        style="background-color: yellow; box-shadow: 4px 4px 4px #000;width: 90%;height: 90px;font-size: 50px;">0</button>
+                                        </td>
+
+                                        <td colspan="3"><button type="button" data-op="=" class="btneql" id="btneql1"
+                                                        onclick="answer()"
+                                                        style="background-color: orange;box-shadow: 4px 4px 4px #000; width: 97%;height: 90px;font-size: 50px;">Result</button>
+                                        </td>
+
+
+                                </tr>
+
+
+                        </table>
+
+
+
+                </div>
+
+
+
+
+
+
+                <script>
+                        function shownum(val) {
+                                document.getElementById("box").value += val;
+                                document.getElementById("box").style.fontSize = "90px"
+                        }
+
+                        function answer() {
+
+                                document.getElementById("box").value = eval(document.getElementById("box").value)
+                        }
+                        function clearr() {
+
+                                document.getElementById("box").value = " "
+                        }
+
+                </script>
+</body>
+
+</html>
